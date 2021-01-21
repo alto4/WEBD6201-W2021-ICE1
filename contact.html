@@ -36,7 +36,7 @@
               <a class="nav-link" aria-current="page" href="services.html"><i class="fas fa-map fa-lg"></i> Services</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-phone fa-lg"></i> Contacts</a>
+              <a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-phone fa-lg"></i> Contact</a>
             </li>   
           </ul>        
         </div>
@@ -46,8 +46,27 @@
 
   <!-- Main Content -->
   <main class="container">
-    <div class="hero">
-      <h1>Contact</h1>
+    <div class="my-5">
+      <h1 class="mx-auto text-center">Contact</h1>
+
+      <div class="row justify-content-md-center g-3">
+        <form class="col-8 col-lg-4 col-md-6 col-sm-10">
+          <div class="input-group mb-3 row">
+            <span class="input-group-text col-4" id="inputGroup-sizing-default">Full Name</span>
+            <input id="fullName" name="fullName" type="text" class="form-control" aria-label="Full Name" aria-describedby="Full Name input" required>
+          </div>
+          <div class="input-group mb-3 row">
+            <span class="input-group-text col-4" id="inputGroup-sizing-default">Phone Number</span>
+            <input id="phoneNumber" name="phoneNumber" type="phone" class="form-control" aria-label="Phone Number" aria-describedby="Phone Number input" required>
+          </div>
+          <div class="input-group mb-3 row">
+            <span class="input-group-text col-4" id="inputGroup-sizing-default">Email Address</span>
+            <input id="emailAddress" name="emailAddress" type="email" class="form-control" aria-label="Email Address" aria-describedby="Email Address input" required>
+          </div>
+            <button type="submit" class="btn btn-success"><i class="fas fa-envelope"></i> Send</button>
+            <button type="reset" class="btn btn-danger"><i class="fas fa-undo"></i> Cancel</button>
+        </form>
+        </div>
     </div>
   </main>
 
