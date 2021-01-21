@@ -56,7 +56,7 @@
     // Form validation
     let fullName = document.getElementById('fullName');
     fullName.addEventListener('blur', function() {
-      if(fullName.value.length < 2)
+      if(fullName.value.length < 3)
       {
         fullName.focus();
         fullName.select();
