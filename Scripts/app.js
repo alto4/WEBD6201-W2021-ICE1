@@ -48,8 +48,42 @@
   function displayAbout() {}
   function displayProjects() {}
   function displayServices() {}
-  function displayContact() {}
+  
+  function displayContact() {
+    let messageArea = document.getElementById('messageArea');
+    messageArea.hidden = true;
+   
+    // Form validation
+    let fullName = document.getElementById('fullName');
+    fullName.addEventListener('blur', function() {
+      if(fullName.value.length < 2)
+      {
+        fullName.focus();
+        fullName.select();
+    
+        // Set alert message and display
+        messageArea.hidden = false;
+        messageArea.className = 'alert alert-danger';
+        messageArea.textContent = 'Please enter an appropriate name';
+      } else {
+        messageArea.removeAttribute('class');
+        messageArea.hidden = true;
+      }
+    });
 
+    // Button 
+    let sendButton = document.getElementById('sendButton');
+    sendButton.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      // Get values from form inputs
+      console.log(fullName.value);
+      console.log(contactNumber.value);
+      console.log(emailAddress.value);
+    })
+  }
+
+  // Start - calls render function corresponding to current page
   function Start() {
     console.log("App started...");
 
